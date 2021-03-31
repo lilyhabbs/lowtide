@@ -16,7 +16,6 @@ const countLetters = string => {
       counts[char] = 1;
     }
   }
-  console.log('counts:', counts);
   return counts;
 };
 
