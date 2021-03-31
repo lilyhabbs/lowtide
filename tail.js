@@ -1,5 +1,5 @@
 // tests code to compare if actual result matches expected result
-const assertEqual = (actual, expected) => {
+const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
   } else {
