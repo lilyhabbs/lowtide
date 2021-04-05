@@ -1,7 +1,7 @@
 const assert = require('chai').assert;
 const middle = require('../middle');
 
-describe('head', () => {
+describe('middle', () => {
   it('should return an empty array if array has one element', () => {
     const actual = middle([1]);
     const expected = [];
