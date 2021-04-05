@@ -1,14 +1,28 @@
-const assertArraysEqual = require('../assertArraysEqual');
+const assert = require('chai').assert;
 const middle = require('../middle');
 
-// Return empty array for arrays with one or two elements
-assertArraysEqual(middle([1]), []);
-assertArraysEqual(middle([1, 2]), []);
+describe('head', () => {
+  it('should return an empty array if array has one element', () => {
+    const actual = middle([1]);
+    const expected = [];
+    assert.sameDeepOrderedMembers(actual, expected);
+  });
 
-// Return a single middle element for arrays with odd number of elements
-assertArraysEqual(middle([1, 2, 3]), [2]);
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
+  it('should return an empty array if array has two elements', () => {
+    const actual = middle([1, 2]);
+    const expected = [];
+    assert.sameDeepOrderedMembers(actual, expected);
+  });
 
-// Return two middle elements for arrays with even number of elements
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
+  it('should return one middle element if array has odd number of elements', () => {
+    const actual = middle([1, 2, 3, 4, 5]);
+    const expected = [3];
+    assert.sameDeepOrderedMembers(actual, expected);
+  });
+
+  it('should return two middle elements if array has even number of elements', () => {
+    const actual = middle([1, 2, 3, 4]);
+    const expected = [2, 3];
+    assert.sameDeepOrderedMembers(actual, expected);
+  });
+});

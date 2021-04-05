@@ -1,19 +1,22 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
-// Check the returned array elements
-const result = tail(['Hello', 'Lighthouse', 'Labs']);
-assertEqual(result.length, 2);
-assertEqual(result[0], 'Lighthouse');
-assertEqual(result[1], 'Labs');
+describe('tail', () => {
+  it('should return all elements in an array, except for the first item', () => {
+    const actual = tail(['Hello', 'Lighthouse', 'Labs']);
+    const expected = ['Lighthouse', 'Labs'];
+    assert.sameDeepOrderedMembers(actual, expected);
+  });
 
-// Check the returned array elements for empty array
-assertEqual(tail([]).length, 0);
+  it('should return an empty array for an array with one element', () => {
+    const actual = tail(['Lighthouse']);
+    const expected = [];
+    assert.sameDeepOrderedMembers(actual, expected);
+  });
 
-// Check the returned array elements for an array with one element
-assertEqual(tail(['Hello']).length, 0);
-
-// Check if original array has not been modified
-const words = ['Yo Yo', 'Lighthouse', 'Labs'];
-tail(words);
-assertEqual(words.length, 3);
+  it('should return an empty array for an empty array', () => {
+    const actual = tail([]);
+    const expected = [];
+    assert.sameDeepOrderedMembers(actual, expected);
+  });
+});

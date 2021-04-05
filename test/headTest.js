@@ -1,12 +1,22 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const head = require('../head');
 
-// Check the returned array elements
-assertEqual(head([5, 6, 7]), 5);
-assertEqual(head(['Hello', 'Lighthouse', 'Labs']), 'Hello');
+describe('head', () => {
+  it('should return the first element of an array', () => {
+    const actual = head([1, 2, 3]);
+    const expected = 1;
+    assert.strictEqual(actual, expected);
+  });
 
-// Check if array with only one element yields that element
-assertEqual(head([1]), 1);
+  it('should return the single element for an array with one element', () => {
+    const actual = head(['5']);
+    const expected = '5';
+    assert.strictEqual(actual, expected);
+  });
 
-// Check if empty array yields undefined
-assertEqual(head([]), undefined);
+  it('should return undefined for an empty array', () => {
+    const actual = head([]);
+    const expected = undefined;
+    assert.strictEqual(actual, expected);
+  });
+});
