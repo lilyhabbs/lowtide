@@ -1,6 +1,6 @@
 // allItems: an array of strings
 // itemsToCount: an object specifying what to count within the array
-const countOnly = function(allItems, itemsToCount) {
+const countOnly = (allItems, itemsToCount) => {
   const results = {};
 
   for (const item of allItems) {
