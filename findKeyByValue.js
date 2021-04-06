@@ -1,7 +1,7 @@
 // return first key that contains given value
-const findKeyByValue = (obj, value) => {
-  for (const key in obj) {
-    if (obj[key] === value) {
+const findKeyByValue = (object, value) => {
+  for (const key in object) {
+    if (object[key] === value) {
       return key;
     }
   }

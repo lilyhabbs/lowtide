@@ -1,4 +1,4 @@
-// return a slice of the array with elements taken from the beginning
+// returns elements of an array until the condition of the callback function is met
 const takeUntil = (array, callback) => {
   const results = [];
 

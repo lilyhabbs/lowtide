@@ -1,3 +1,4 @@
+// executes a function on every element of an array
 const map = (array, callback) => {
   const results = [];
 

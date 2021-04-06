@@ -1,10 +1,10 @@
 // return all the indices in the string where each character is found
-const letterPositions = str => {
+const letterPositions = string => {
 
   const results = {};
 
-  for (let i = 0; i < str.length; i++) {
-    let char = str[i];
+  for (let i = 0; i < string.length; i++) {
+    let char = string[i];
 
     if (results[char]) {
       results[char].push(i);

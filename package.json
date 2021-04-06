@@ -3,7 +3,7 @@
     "chai": "^4.3.4",
     "mocha": "^8.3.2"
   },
-  "name": "lotide",
+  "name": "@lilyhabbs/lotide",
   "version": "1.0.0",
   "main": "assertArraysEqual.js",
   "directories": {
@@ -105,5 +105,5 @@
     "url": "https://github.com/lilyhabbs/lowtide/issues"
   },
   "homepage": "https://github.com/lilyhabbs/lowtide#readme",
-  "description": ""
+  "description": "A mini clone of the Lodash library."
 }
